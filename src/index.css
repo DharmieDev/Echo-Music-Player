@@ -1,6 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 @import "tailwindcss";
 
+@utility scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    
+  }
 
+  &::-webkit-scrollbar-track {
+    background: theme(colors.gray.100);
+    border-radius: 30px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: theme(colors.gray.400);
+    border-radius: 30px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: theme(colors.gray.600);
+  }
+}
+
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+
+@theme {
+    --color-bg: #0B1215;
+    --color-sidebar: #212A37;
+    --color-hover: #696767;
+    --color-searchbar-text: #A8A8A8;
+    --color-secondary-text: #959595;
+}
 
 @font-face {
     font-family: 'Manrope';
@@ -14,9 +52,9 @@
 
 @font-face {
     font-family: 'SF-Pro-Display';
-    src: url("src\assets\fonts\SF Display\SF-Pro-Text-Regular.otf") format('opentype'),
-         url("src\assets\fonts\SF Display\SF-Pro-Text-Medium.otf") format('opentype'),
-         url("src\assets\fonts\SF Display\SF-Pro-Text-Bold.otf") format('opentype');
+    src: url("../src/assets/fonts/SF-Display/SF-Pro-Display-Regular.otf") format('opentype'),
+         url("../src/assets/fonts/SF-Display/SF-Pro-Display-Semibold.otf") format('opentype'),
+         url("../src/assets/fonts/SF-Display/SF-Pro-Text-Bold.otf") format('opentype');
     font-weight: 400, 500, 600;
     font-style: normal;
     font-display: swap;
